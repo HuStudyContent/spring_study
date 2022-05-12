@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    使用注解的支持，必须得加上-->
+    <context:annotation-config/>
+
+    <bean id="cat1"  class="com.kuang.pojo.Cat"/>
+    <bean id="dog1" class="com.kuang.pojo.Dog"/>
+    <bean id="dog2" class="com.kuang.pojo.Dog"/>
+    <bean id="people" class="com.kuang.pojo.People"/>
+
+
+
+<!--    byName: 会自动咋容器上下文中查找，和自己对象的set方法后面的值对应的beanid!
+        byType: 会自动咋容器上下文中查找，和自己对象属性类型相同的bean!
+-->
+<!--    <bean id="people" class="com.kuang.pojo.People" autowire="byType">-->
+<!--        <property name="name" value="小狂神"/>-->
+<!--     </bean>-->
+
+
+</beans>
